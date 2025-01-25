@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 5_of_diamonds_0
+      name: 5_of_diamonds_face
       rect:
         serializedVersion: 2
-        x: 34
-        y: 37
-        width: 502
-        height: 728
+        x: 35
+        y: 38
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 74584a5359dfc0960800000000000000
-      internalID: 7569703890994890055
+      spriteID: 38a8bebe26e824e0d9dd59c64c84dbbb
+      internalID: 1778514984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_of_diamonds_1
+      name: 5_of_diamonds_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0f3e5aeb6e24aa680800000000000000
-      internalID: -8743102167777942544
+      spriteID: 847569cd87a0949868eceb7396eff7ae
+      internalID: 695398519
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4a3ea85dc35374e12888d11a31fbf547
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      5_of_diamonds_back: 695398519
+      5_of_diamonds_face: 1778514984
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

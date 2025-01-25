@@ -142,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4_of_diamonds_front
+      name: 4_of_diamonds_face
       rect:
         serializedVersion: 2
         x: 33
@@ -150,15 +150,15 @@ TextureImporter:
         width: 500
         height: 725
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d526d2d98380f4460ae76824a601114f
-      internalID: 1002010275
+      spriteID: d0afa7550fb4d414aa44b354ce6e00a7
+      internalID: 13469455
       vertices: []
       indices: 
       edges: []
@@ -172,14 +172,14 @@ TextureImporter:
         width: 504
         height: 725
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23c4cee3683294144ade10b6b635bea0
+      spriteID: 20597e89683ad45b6ac79c2ed9b3f39f
       internalID: 1939187891
       vertices: []
       indices: 
@@ -200,7 +200,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       4_of_diamonds_back: 1939187891
-      4_of_diamonds_front: 1002010275
+      4_of_diamonds_face: 13469455
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

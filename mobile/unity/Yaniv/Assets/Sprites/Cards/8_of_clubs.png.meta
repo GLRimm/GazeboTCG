@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 8_of_clubs_0
+      name: 8_of_clubs_face
       rect:
         serializedVersion: 2
-        x: 29
-        y: 35
-        width: 502
-        height: 728
+        x: 30
+        y: 36
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7111552ce83f29830800000000000000
-      internalID: 4076588407194980631
+      spriteID: 7ac10f4a9cd844b559f157c7435442fe
+      internalID: 869874215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8_of_clubs_1
+      name: 8_of_clubs_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e6097ff5352925390800000000000000
-      internalID: -7831035915253870482
+      spriteID: 22cb20b11ae314795b3f36240fc9a6b3
+      internalID: 1850928274
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 98a24f56dbec64e3f9a35e5237a78895
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      8_of_clubs_back: 1850928274
+      8_of_clubs_face: 869874215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

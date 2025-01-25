@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: king_of_diamonds_0
+      name: king_of_diamonds_face
       rect:
         serializedVersion: 2
-        x: 26
-        y: 35
-        width: 502
-        height: 728
+        x: 27
+        y: 36
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3e4134696dfd17900800000000000000
-      internalID: 680571131446629603
+      spriteID: 08e5a75aa3f0346599f220b68e02086f
+      internalID: -511470457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: king_of_diamonds_1
+      name: king_of_diamonds_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 40
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cefb39c3c77947bf0800000000000000
-      internalID: -327470313043148820
+      spriteID: c03a5eb95454f4f129d9a6519570f7d8
+      internalID: 335271922
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fe9336afffb9340f29edca6f5780208a
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      king_of_diamonds_back: 335271922
+      king_of_diamonds_face: -511470457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

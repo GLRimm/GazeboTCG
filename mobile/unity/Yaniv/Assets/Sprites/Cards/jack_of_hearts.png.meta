@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jack_of_hearts_0
+      name: jack_of_hearts_face
       rect:
         serializedVersion: 2
-        x: 33
-        y: 36
-        width: 502
-        height: 728
+        x: 34
+        y: 37
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 57a73596c2bf0d680800000000000000
-      internalID: -8732203509307180427
+      spriteID: d84260a5d707b4f008384ce71a4ab3db
+      internalID: 1440298709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jack_of_hearts_1
+      name: jack_of_hearts_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 38
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 529c777b890847f30800000000000000
-      internalID: 4572420915089361189
+      spriteID: c6cf2bb58e67a43eea30b57c4b2881c9
+      internalID: -1328242538
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b3646a1a14b9c42f38087447576ed1cd
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jack_of_hearts_back: -1328242538
+      jack_of_hearts_face: 1440298709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

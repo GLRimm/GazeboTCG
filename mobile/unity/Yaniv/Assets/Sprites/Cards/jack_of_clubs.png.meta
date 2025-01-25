@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jack_of_clubs_0
+      name: jack_of_clubs_face
       rect:
         serializedVersion: 2
-        x: 29
-        y: 41
-        width: 502
-        height: 728
+        x: 30
+        y: 42
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b8117444bad0a1590800000000000000
-      internalID: -7702829183427735157
+      spriteID: 5ede5405a065e4139a4a608ae734f8eb
+      internalID: 1877383728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jack_of_clubs_1
+      name: jack_of_clubs_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dd24f20b9cb82ffc0800000000000000
-      internalID: -3462551465133915427
+      spriteID: 1b7c0528f4e4a45d4bdc3aa4058da014
+      internalID: 434601334
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 300d67b1a9ba243568622bdb69ef1e9e
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jack_of_clubs_back: 434601334
+      jack_of_clubs_face: 1877383728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

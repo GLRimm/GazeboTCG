@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ace_of_spades_0
+      name: ace_of_spades_face
       rect:
         serializedVersion: 2
-        x: 27
-        y: 37
-        width: 502
-        height: 728
+        x: 28
+        y: 38
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fe9c64cd120ed4380800000000000000
-      internalID: -8985279245500102161
+      spriteID: b3e4bfcb969a34f63ac28fd0559b23e7
+      internalID: 573995596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ace_of_spades_1
+      name: ace_of_spades_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 40
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3fe9930979cce9150800000000000000
-      internalID: 5881363114724269811
+      spriteID: 1f35a0c297bbd43bca0874c8bbcae5f9
+      internalID: -380422461
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 14c0ce0826b184f468e2a260f41bfe8f
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ace_of_spades_back: -380422461
+      ace_of_spades_face: 573995596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

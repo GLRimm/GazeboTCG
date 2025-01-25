@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 6_of_diamonds_0
+      name: 6_of_diamonds_face
       rect:
         serializedVersion: 2
-        x: 34
-        y: 35
-        width: 502
-        height: 728
+        x: 35
+        y: 34
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: de3c6a15c89795b90800000000000000
-      internalID: -7252632081331207187
+      spriteID: a23391acb15ea490d8ebcf4a47a3e764
+      internalID: 1150505148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6_of_diamonds_1
+      name: 6_of_diamonds_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85dad58bd862cb770800000000000000
-      internalID: 8627813376260418904
+      spriteID: 123092aa2caad40b68552d802a6aa69c
+      internalID: -653303101
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5869af33860fb4299b23ec90908979c6
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      6_of_diamonds_back: -653303101
+      6_of_diamonds_face: 1150505148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

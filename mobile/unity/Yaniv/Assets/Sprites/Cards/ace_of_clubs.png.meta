@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ace_of_clubs_0
+      name: ace_of_clubs_face
       rect:
         serializedVersion: 2
-        x: 31
-        y: 42
-        width: 502
-        height: 728
+        x: 32
+        y: 43
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ff437b62e6a641370800000000000000
-      internalID: 8292369835224413439
+      spriteID: 49e7d6c2fffa942a4905ec03fe3c34ed
+      internalID: 230203200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ace_of_clubs_1
+      name: ace_of_clubs_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb2bb8e6fe479a270800000000000000
-      internalID: 8262263563088540351
+      spriteID: 2805423a45f21474cbad4015af2caf26
+      internalID: 1988703928
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 708855b620bb243458e248cd952bad23
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ace_of_clubs_back: 1988703928
+      ace_of_clubs_face: 230203200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

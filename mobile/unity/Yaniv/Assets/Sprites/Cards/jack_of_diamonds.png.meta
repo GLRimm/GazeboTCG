@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jack_of_diamonds_0
+      name: jack_of_diamonds_face
       rect:
         serializedVersion: 2
-        x: 32
-        y: 37
-        width: 502
-        height: 728
+        x: 33
+        y: 38
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ca5927cfbfcf27be0800000000000000
-      internalID: -1480843168249113172
+      spriteID: 20ca6889fa088414d879a1e5b2258b1d
+      internalID: -1766892761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jack_of_diamonds_1
+      name: jack_of_diamonds_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e53e890b31faadc60800000000000000
-      internalID: 7843774200121189214
+      spriteID: 11706fa3fca6141f3a6bcbeab9c3a93a
+      internalID: -899309010
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d296ea6b4fc4649e4aa693932f401593
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jack_of_diamonds_back: -899309010
+      jack_of_diamonds_face: -1766892761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

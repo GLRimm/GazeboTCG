@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 6_of_hearts_0
+      name: 6_of_hearts_face
       rect:
         serializedVersion: 2
-        x: 41
-        y: 38
-        width: 502
-        height: 728
+        x: 42
+        y: 39
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 28042bd6863964110800000000000000
-      internalID: 1244844423740801154
+      spriteID: 4163e07e36fe64fdcbedb80e2db86a59
+      internalID: 146251273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6_of_hearts_1
+      name: 6_of_hearts_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 454739a1d0c790580800000000000000
-      internalID: -8860414396152449964
+      spriteID: 19e66a60e175a496bb81379f17a32d83
+      internalID: 1626539613
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a55c16c30d3b947c99981fcc6506bede
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      6_of_hearts_back: 1626539613
+      6_of_hearts_face: 146251273
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

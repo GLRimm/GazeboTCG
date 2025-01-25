@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 10_of_diamonds_0
+      name: 10_of_diamonds_face
       rect:
         serializedVersion: 2
-        x: 34
-        y: 35
-        width: 502
-        height: 728
+        x: 35
+        y: 36
+        width: 500
+        height: 726
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fad471b43eea65bf0800000000000000
-      internalID: -335888830951895633
+      spriteID: 8db04a565ea3e4f67baee27f901875ba
+      internalID: -1294065409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 10_of_diamonds_1
+      name: 10_of_diamonds_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 38
+        width: 504
+        height: 725
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ab86442ca3b6a2020800000000000000
-      internalID: 2317782858347079866
+      spriteID: 981ec91ffdf9941359679f470e29a06c
+      internalID: -1977891157
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d0d307d8d16f94f188783c03b54c35be
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      10_of_diamonds_back: -1977891157
+      10_of_diamonds_face: -1294065409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

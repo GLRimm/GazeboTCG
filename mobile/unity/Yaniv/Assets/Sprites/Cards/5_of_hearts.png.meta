@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 5_of_hearts_0
+      name: 5_of_hearts_face
       rect:
         serializedVersion: 2
-        x: 28
-        y: 35
-        width: 502
-        height: 728
+        x: 29
+        y: 36
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2388551e57e7e32b0800000000000000
-      internalID: -5602901841645565902
+      spriteID: ad26adcf0b3824ff2bfa686ab6eae6ee
+      internalID: 941670787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_of_hearts_1
+      name: 5_of_hearts_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8fecff0345612dfd0800000000000000
-      internalID: -2318766307287249160
+      spriteID: b135aaaaecefb472caf472838eb6aa5a
+      internalID: -1193118891
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 89256eb130c8244c285ec322db6f7f25
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      5_of_hearts_back: -1193118891
+      5_of_hearts_face: 941670787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ace_of_hearts_0
+      name: ace_of_hearts_face
       rect:
         serializedVersion: 2
-        x: 39
-        y: 38
-        width: 502
-        height: 728
+        x: 42
+        y: 43
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d875c661857ecc6b0800000000000000
-      internalID: -5274586698038356083
+      spriteID: 523bc8beb8d504715869271277deea0d
+      internalID: 1091767756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ace_of_hearts_1
+      name: ace_of_hearts_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 36
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e9ace5130a34fcd60800000000000000
-      internalID: 7912617425615375006
+      spriteID: 40760191d479b40bea0e64e3a5f00bb6
+      internalID: 928921941
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a8e1de0abd987454ea38d4504dcc6ff5
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ace_of_hearts_back: 928921941
+      ace_of_hearts_face: 1091767756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

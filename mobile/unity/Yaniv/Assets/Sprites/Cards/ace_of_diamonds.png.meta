@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ace_of_diamonds_0
+      name: ace_of_diamonds_face
       rect:
         serializedVersion: 2
-        x: 28
-        y: 35
-        width: 502
-        height: 728
+        x: 29
+        y: 36
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7ab457cc8e183b0e0800000000000000
-      internalID: -2255316151519851609
+      spriteID: 227337ec634d34c12a8b3ca1b2f48229
+      internalID: 1182816653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ace_of_diamonds_1
+      name: ace_of_diamonds_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 558
+        y: 38
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9be7edf12b6d12ba0800000000000000
-      internalID: -6115370758465225031
+      spriteID: 99ef8f1df2d5743fcba6dfbe0c44422a
+      internalID: -1279914874
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ea2c0609c8de94587ad3936a8f7c3eb6
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ace_of_diamonds_back: -1279914874
+      ace_of_diamonds_face: 1182816653
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

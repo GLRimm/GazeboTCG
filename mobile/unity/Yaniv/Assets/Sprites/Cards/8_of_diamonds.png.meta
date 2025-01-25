@@ -142,45 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 8_of_diamonds_0
+      name: 8_of_diamonds_face
       rect:
         serializedVersion: 2
-        x: 33
-        y: 37
-        width: 502
-        height: 728
+        x: 34
+        y: 38
+        width: 500
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bd6d63d4ed23e7040800000000000000
-      internalID: 4647207795852498651
+      spriteID: 80857c92d7aae4c959ea5d90d3490cec
+      internalID: 1263495689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8_of_diamonds_1
+      name: 8_of_diamonds_back
       rect:
         serializedVersion: 2
-        x: 557
-        y: 35
-        width: 506
-        height: 727
+        x: 556
+        y: 40
+        width: 504
+        height: 725
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1e3aba5946b2eae20800000000000000
-      internalID: 3363673682700116961
+      spriteID: 3daab27a5340e4ded89b07e37d23eebd
+      internalID: -838260228
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a788452dc7761497caeef846476eac93
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      8_of_diamonds_back: -838260228
+      8_of_diamonds_face: 1263495689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
