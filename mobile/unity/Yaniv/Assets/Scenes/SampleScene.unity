@@ -234,6 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59611154}
   - component: {fileID: 59611155}
+  - component: {fileID: 59611156}
   m_Layer: 0
   m_Name: red_joker
   m_TagString: Untagged
@@ -311,6 +312,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &59611156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59611153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 474867165, guid: 212daac1298f240379c756526789cd69, type: 3}
+  backSprite: {fileID: -1556702965, guid: 212daac1298f240379c756526789cd69, type: 3}
+  value: 0
+  suit: 4
+  rank: 0
 --- !u!1 &86722422
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86722423}
   - component: {fileID: 86722424}
+  - component: {fileID: 86722425}
   m_Layer: 0
   m_Name: ace_of_clubs
   m_TagString: Untagged
@@ -398,6 +417,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &86722425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86722422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 230203200, guid: a0043d532abd7465481af5e91eca3a1d, type: 3}
+  backSprite: {fileID: 1988703928, guid: a0043d532abd7465481af5e91eca3a1d, type: 3}
+  value: 1
+  suit: 2
+  rank: 1
 --- !u!1 &86900609
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210112440}
   - component: {fileID: 210112441}
+  - component: {fileID: 210112442}
   m_Layer: 0
   m_Name: jack_of_clubs
   m_TagString: Untagged
@@ -695,6 +732,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &210112442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210112439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 1877383728, guid: 17ca9bb269c214641b05a0a34bdd3015, type: 3}
+  backSprite: {fileID: 434601334, guid: 17ca9bb269c214641b05a0a34bdd3015, type: 3}
+  value: 0
+  suit: 2
+  rank: 11
 --- !u!1 &245982209
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245982210}
   - component: {fileID: 245982211}
+  - component: {fileID: 245982212}
   m_Layer: 0
   m_Name: king_of_spades
   m_TagString: Untagged
@@ -782,6 +837,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &245982212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245982209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: -52040461, guid: 62df7be55863e4eeab8a6a89252b8b54, type: 3}
+  backSprite: {fileID: -1627041328, guid: 62df7be55863e4eeab8a6a89252b8b54, type: 3}
+  value: 10
+  suit: 3
+  rank: 13
 --- !u!1 &282070924
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 282070925}
   - component: {fileID: 282070926}
+  - component: {fileID: 282070927}
   m_Layer: 0
   m_Name: king_of_clubs
   m_TagString: Untagged
@@ -869,6 +942,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &282070927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282070924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: -685029800, guid: 5b9c8f65eea1a4afeb179e4488646d5a, type: 3}
+  backSprite: {fileID: -2144990738, guid: 5b9c8f65eea1a4afeb179e4488646d5a, type: 3}
+  value: 10
+  suit: 2
+  rank: 13
 --- !u!1 &353807457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,6 +1946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 591832402}
   - component: {fileID: 591832403}
+  - component: {fileID: 591832404}
   m_Layer: 0
   m_Name: queen_of_hearts
   m_TagString: Untagged
@@ -1933,6 +2024,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &591832404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591832401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 1931513484, guid: 1b300491244f34173a72d2061cdc553e, type: 3}
+  backSprite: {fileID: 415975441, guid: 1b300491244f34173a72d2061cdc553e, type: 3}
+  value: 10
+  suit: 0
+  rank: 12
 --- !u!1 &604531315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,6 +2240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 656067354}
   - component: {fileID: 656067355}
+  - component: {fileID: 656067356}
   m_Layer: 0
   m_Name: jack_of_diamonds
   m_TagString: Untagged
@@ -2209,6 +2318,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &656067356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656067353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: -1766892761, guid: 5cbdffc04a61445f781f07b796044e2a, type: 3}
+  backSprite: {fileID: -899309010, guid: 5cbdffc04a61445f781f07b796044e2a, type: 3}
+  value: 0
+  suit: 1
+  rank: 11
 --- !u!1 &666022071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,6 +2345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 666022072}
   - component: {fileID: 666022073}
+  - component: {fileID: 666022074}
   m_Layer: 0
   m_Name: black_joker
   m_TagString: Untagged
@@ -2296,6 +2423,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &666022074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666022071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: -2053080245, guid: 2546441eb90c44fd996aee7b8066d120, type: 3}
+  backSprite: {fileID: -1220759135, guid: 2546441eb90c44fd996aee7b8066d120, type: 3}
+  value: 0
+  suit: 4
+  rank: 0
 --- !u!1 &763256448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,6 +2975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971775052}
   - component: {fileID: 971775053}
+  - component: {fileID: 971775054}
   m_Layer: 0
   m_Name: ace_of_diamonds
   m_TagString: Untagged
@@ -2908,6 +3053,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &971775054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971775051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 1182816653, guid: d6ec11e9be3e341f69894b844bc9f9b3, type: 3}
+  backSprite: {fileID: -1279914874, guid: d6ec11e9be3e341f69894b844bc9f9b3, type: 3}
+  value: 1
+  suit: 1
+  rank: 1
 --- !u!1 &1028378824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,6 +3690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1214207067}
   - component: {fileID: 1214207068}
+  - component: {fileID: 1214207069}
   m_Layer: 0
   m_Name: ace_of_hearts
   m_TagString: Untagged
@@ -3605,6 +3768,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1214207069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214207066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 1091767756, guid: 268aca3aaed0a4dcc9c5ab53bae5723f, type: 3}
+  backSprite: {fileID: 928921941, guid: 268aca3aaed0a4dcc9c5ab53bae5723f, type: 3}
+  value: 1
+  suit: 0
+  rank: 1
 --- !u!1 &1272020575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4035,6 +4215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1308064611}
   - component: {fileID: 1308064612}
+  - component: {fileID: 1308064613}
   m_Layer: 0
   m_Name: king_of_hearts
   m_TagString: Untagged
@@ -4112,6 +4293,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1308064613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308064610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: -1074475195, guid: 992d9c8122bdf4bdca59319444ce9b83, type: 3}
+  backSprite: {fileID: -39025245, guid: 992d9c8122bdf4bdca59319444ce9b83, type: 3}
+  value: 10
+  suit: 0
+  rank: 13
 --- !u!1 &1311927583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,6 +4320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311927584}
   - component: {fileID: 1311927585}
+  - component: {fileID: 1311927586}
   m_Layer: 0
   m_Name: queen_of_diamonds
   m_TagString: Untagged
@@ -4199,6 +4398,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1311927586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311927583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: -1610378780, guid: 8507694a96ed8474a95391125f05a07a, type: 3}
+  backSprite: {fileID: -512562890, guid: 8507694a96ed8474a95391125f05a07a, type: 3}
+  value: 10
+  suit: 1
+  rank: 12
 --- !u!1 &1390026464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4314,6 +4530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1427962108}
   - component: {fileID: 1427962109}
+  - component: {fileID: 1427962110}
   m_Layer: 0
   m_Name: queen_of_spades
   m_TagString: Untagged
@@ -4391,6 +4608,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1427962110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427962107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 1892381485, guid: 24dce57e038f646ccbc70545c5a21f56, type: 3}
+  backSprite: {fileID: -1613365965, guid: 24dce57e038f646ccbc70545c5a21f56, type: 3}
+  value: 10
+  suit: 3
+  rank: 12
 --- !u!1 &1436565925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4506,6 +4740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1510868929}
   - component: {fileID: 1510868930}
+  - component: {fileID: 1510868931}
   m_Layer: 0
   m_Name: ace_of_spades
   m_TagString: Untagged
@@ -4583,6 +4818,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1510868931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510868928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 573995596, guid: 5162f275bcc484ca0ba7d5f0eb6f251a, type: 3}
+  backSprite: {fileID: -380422461, guid: 5162f275bcc484ca0ba7d5f0eb6f251a, type: 3}
+  value: 1
+  suit: 3
+  rank: 1
 --- !u!1 &1559301880
 GameObject:
   m_ObjectHideFlags: 0
@@ -4698,6 +4950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1586407227}
   - component: {fileID: 1586407228}
+  - component: {fileID: 1586407229}
   m_Layer: 0
   m_Name: queen_of_clubs
   m_TagString: Untagged
@@ -4775,6 +5028,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1586407229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586407226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 586826522, guid: 3dc60b06cc52c45c58e2cea47d5ae13f, type: 3}
+  backSprite: {fileID: -953709096, guid: 3dc60b06cc52c45c58e2cea47d5ae13f, type: 3}
+  value: 10
+  suit: 0
+  rank: 12
 --- !u!1 &1591830480
 GameObject:
   m_ObjectHideFlags: 0
@@ -5357,6 +5627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1818711857}
   - component: {fileID: 1818711858}
+  - component: {fileID: 1818711859}
   m_Layer: 0
   m_Name: jack_of_spades
   m_TagString: Untagged
@@ -5434,6 +5705,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1818711859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818711856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: -853388293, guid: fbb1d9f7d83894bcdb5d9d7370c86372, type: 3}
+  backSprite: {fileID: 2103442547, guid: fbb1d9f7d83894bcdb5d9d7370c86372, type: 3}
+  value: 0
+  suit: 3
+  rank: 11
 --- !u!1 &1899087919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,6 +5942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057116609}
   - component: {fileID: 2057116610}
+  - component: {fileID: 2057116611}
   m_Layer: 0
   m_Name: jack_of_hearts
   m_TagString: Untagged
@@ -5731,6 +6020,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2057116611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057116608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: 1440298709, guid: 9f6cfc22d7d59445b9908573ba901960, type: 3}
+  backSprite: {fileID: -1328242538, guid: 9f6cfc22d7d59445b9908573ba901960, type: 3}
+  value: 0
+  suit: 0
+  rank: 11
 --- !u!1 &2138201443
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,6 +6047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2138201444}
   - component: {fileID: 2138201445}
+  - component: {fileID: 2138201446}
   m_Layer: 0
   m_Name: king_of_diamonds
   m_TagString: Untagged
@@ -5818,6 +6125,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2138201446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138201443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5077feb9f76c14a218b77e6c69ee37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceSprite: {fileID: -511470457, guid: 8c347489c601b49638b23ab2197c0dc2, type: 3}
+  backSprite: {fileID: 335271922, guid: 8c347489c601b49638b23ab2197c0dc2, type: 3}
+  value: 10
+  suit: 1
+  rank: 13
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
