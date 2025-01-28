@@ -1936,6 +1936,105 @@ MonoBehaviour:
   value: 0
   suit: 3
   rank: 7
+--- !u!1 &535088846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 535088848}
+  - component: {fileID: 535088847}
+  m_Layer: 0
+  m_Name: Game Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &535088847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535088846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b618209a7abbd40a2af972b25fba4101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCards:
+  - {fileID: 86900611}
+  - {fileID: 353807459}
+  - {fileID: 1028378826}
+  - {fileID: 1390026466}
+  - {fileID: 1283831374}
+  - {fileID: 832108959}
+  - {fileID: 765057095}
+  - {fileID: 1285456528}
+  - {fileID: 763256450}
+  - {fileID: 1670064565}
+  - {fileID: 359614818}
+  - {fileID: 1436565927}
+  - {fileID: 604531317}
+  - {fileID: 1290685328}
+  - {fileID: 1138781694}
+  - {fileID: 908652083}
+  - {fileID: 146544200}
+  - {fileID: 1711667336}
+  - {fileID: 1559301882}
+  - {fileID: 497041762}
+  - {fileID: 25047464}
+  - {fileID: 454306645}
+  - {fileID: 1609817203}
+  - {fileID: 529558110}
+  - {fileID: 1723832833}
+  - {fileID: 517693205}
+  - {fileID: 1272020578}
+  - {fileID: 1046012366}
+  - {fileID: 1104619889}
+  - {fileID: 1591830483}
+  - {fileID: 480062510}
+  - {fileID: 1899087922}
+  - {fileID: 2009926817}
+  - {fileID: 1151944079}
+  - {fileID: 494799919}
+  - {fileID: 791765015}
+  - {fileID: 86722425}
+  - {fileID: 971775054}
+  - {fileID: 1214207069}
+  - {fileID: 1510868931}
+  - {fileID: 210112442}
+  - {fileID: 656067356}
+  - {fileID: 2057116611}
+  - {fileID: 1818711859}
+  - {fileID: 1586407229}
+  - {fileID: 1311927586}
+  - {fileID: 591832404}
+  - {fileID: 1427962110}
+  - {fileID: 282070927}
+  - {fileID: 2138201446}
+  - {fileID: 1308064613}
+  - {fileID: 245982212}
+  - {fileID: 59611156}
+  - {fileID: 666022074}
+--- !u!4 &535088848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535088846}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.3805587, y: 3.010134, z: -0.0945025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591832401
 GameObject:
   m_ObjectHideFlags: 0
@@ -6149,3 +6248,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1098525225}
+  - {fileID: 535088848}
