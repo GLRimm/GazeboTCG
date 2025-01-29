@@ -17,11 +17,13 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private Vector2 opponentHandPosition = new Vector2(-3f, 3f);
     [SerializeField]
-    private float cardSpacing = 1.5f; // Space between cards in hand
+    private float cardSpacing = 2f; // Space between cards in hand
 
 
     private List<Card> deck = new List<Card>();
     private List<Card> playerHand = new List<Card>();
+
+    private List<Card> playerSelected = new List<Card>();
     private List<Card> opponentHand = new List<Card>();
     private List<Card> discard = new List<Card>();
 
@@ -64,14 +66,11 @@ public class GameController : MonoBehaviour
             if (deck.Count > 0)
             {
                 Card playerCard = deck[0];
-                playerHand.Add(playerCard);
+               
                 deck.RemoveAt(0);
-                Vector2 playerCardPos = playerHandPosition + new Vector2(cardSpacing * i, 0);
                 
                 dealSequence.AppendCallback(() => {
-                    playerCard.MoveToPosition(playerCardPos, 0.3f);
-                    playerCard.FlipCard(0.3f);  // Flip the card face up
-                    playerCard.SetRenderOrder(50 + i);  // Ensure dealt cards are above deck
+                    SendCardToPlayerHand(playerCard);
                     
                 });
                 
@@ -82,12 +81,9 @@ public class GameController : MonoBehaviour
             if (deck.Count > 0)
             {
                 Card opponentCard = deck[0];
-                opponentHand.Add(opponentCard);
                 deck.RemoveAt(0);
-                Vector2 opponentCardPos = opponentHandPosition + new Vector2(cardSpacing * i, 0);
                 dealSequence.AppendCallback(() => {
-                    opponentCard.MoveToPosition(opponentCardPos, 0.3f);
-                    opponentCard.SetRenderOrder(50 + i);
+                    SendCardToOpponentHand(opponentCard);
                     
                 });
                 
@@ -95,6 +91,66 @@ public class GameController : MonoBehaviour
             }
         }
     }
+
+    public void RearrangeHand(List<Card> hand, Vector2 basePosition)
+{
+    int cardCount = hand.Count;
+    if (cardCount == 0) return;
+
+    float totalWidth = cardSpacing * (cardCount - 1);
+    float startX = basePosition.x - (totalWidth / 2);
+
+    for (int i = 0; i < cardCount; i++)
+    {
+        Vector2 newPos = new Vector2(startX + (cardSpacing * i), basePosition.y);
+        hand[i].MoveToPosition(newPos, 0.3f);
+        hand[i].SetRenderOrder(50 + i);
+    }
+}
+
+    private void SendCardToHand(Card card, List<Card> hand, Vector2 handPosition, bool flip) {
+        hand.Add(card);
+        
+         // Calculate the new hand position
+        float totalWidth = cardSpacing * (hand.Count - 1);
+        float startX = handPosition.x - (totalWidth / 2);
+        Vector2 newCardPos = new Vector2(startX + (cardSpacing * (hand.Count - 1)), handPosition.y);
+
+          // Animate the card
+        card.MoveToPosition(newCardPos, 0.3f);
+        if (flip)
+        {
+            card.FlipCard(0.3f);
+        }
+        card.SetRenderOrder(50 + playerHand.Count);
+
+        // Rearrange the hand
+        RearrangeHand(hand, handPosition);
+    }
+
+    private void SendCardToPlayerHand(Card card) {
+        SendCardToHand(card, playerHand, playerHandPosition, true);
+        Debug.Log("Dealt: " + card.rank + " of " + card.suit + " to player");
+    }
+
+    private void SendCardToOpponentHand(Card card) {
+        SendCardToHand(card, opponentHand, opponentHandPosition, false);
+        Debug.Log("Dealt: " + card.rank + " of " + card.suit + " to opponent");
+    }
+
+    public void SelectCard(Card card) {
+        if (playerSelected.Contains(card))
+        {
+            playerSelected.Remove(card);
+            card.MoveUp(-0.5f);
+        }
+        else if (playerHand.Contains(card))
+        {
+            playerSelected.Add(card);
+            card.MoveUp(0.5f);
+        }
+    }
+
 
     // Update is called once per frame
     void Update()

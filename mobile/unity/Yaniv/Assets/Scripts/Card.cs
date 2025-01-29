@@ -17,7 +17,7 @@ public class Card : MonoBehaviour
     private SpriteRenderer rend;
     [SerializeField]
     private Sprite faceSprite, backSprite;
-    private bool coroutineAllowed, facedUp;
+    private bool coroutineAllowed, facedUp, isAnimating;
 
     public int value;
     public CardSuit suit;
@@ -26,7 +26,8 @@ public class Card : MonoBehaviour
     private bool isDragging = false;
     private float startMouseX;
     private float startRotationY;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    private GameController gameController;
     void Awake()
     {
         rend = GetComponent<SpriteRenderer>();
@@ -35,8 +36,22 @@ public class Card : MonoBehaviour
         facedUp = false;
     }
 
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    void Start()
+    {
+        gameController = FindObjectOfType<GameController>();
+    }
+
     public void MoveToPosition(Vector2 targetPos, float duration) {
         transform.DOMove(new Vector3(targetPos.x, targetPos.y, 0), duration);
+    }
+
+    public void MoveUp(float amount)
+    {
+        Vector2 currentPos = transform.position;
+        MoveToPosition(new Vector2(currentPos.x, currentPos.y + amount), 0.3f);
     }
 
     public void FlipCard(float duration = 0.5f) {
@@ -59,7 +74,7 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
-        FlipCard();
+        gameController.SelectCard(this);
         // isDragging = true;
         // startMouseX = Input.mousePosition.x;
         // startRotationY = transform.eulerAngles.y;
