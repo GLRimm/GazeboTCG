@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public enum CardSuit
 {
@@ -26,12 +27,26 @@ public class Card : MonoBehaviour
     private float startMouseX;
     private float startRotationY;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         rend = GetComponent<SpriteRenderer>();
         rend.sprite = backSprite;
         coroutineAllowed = true;
         facedUp = false;
+    }
+
+    public void MoveToPosition(Vector2 targetPos, float duration) {
+        transform.DOMove(new Vector3(targetPos.x, targetPos.y, 0), duration);
+    }
+
+    public void FlipCard(float duration = 0.5f) {
+        float currentRotation = transform.rotation.eulerAngles.y;
+        float targetRotation = (currentRotation < 90 || currentRotation > 270) ? 180f : 0f;
+        transform.DORotate(new Vector3(0, targetRotation, 0), duration);
+    }
+
+    public void SetRenderOrder(int order) {
+        rend.sortingOrder = order;
     }
 
     // private void OnMouseDown()
@@ -44,9 +59,10 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
-        isDragging = true;
-        startMouseX = Input.mousePosition.x;
-        startRotationY = transform.eulerAngles.y;
+        FlipCard();
+        // isDragging = true;
+        // startMouseX = Input.mousePosition.x;
+        // startRotationY = transform.eulerAngles.y;
     }
 
     void OnMouseDrag()
@@ -67,7 +83,8 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       float yRotation = transform.rotation.eulerAngles.y;
+       float yRotation = transform.rotation.eulerAngles.y % 360;
+
        if (yRotation < 90 || yRotation > 270) {
         rend.sprite = faceSprite;
        } else {
