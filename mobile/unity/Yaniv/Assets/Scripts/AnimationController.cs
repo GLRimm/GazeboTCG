@@ -116,7 +116,7 @@ public class AnimationController : MonoBehaviour
         foreach(Card card in stack)
         {
             card.MoveToPosition(locations[location].position, 0.3f);
-            card.SetClickable(false);
+            // card.SetClickable(false);
             card.SetRenderOrder(i);
             i++;
         }

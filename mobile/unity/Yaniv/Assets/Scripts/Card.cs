@@ -23,6 +23,8 @@ public class Card : MonoBehaviour
     public CardSuit suit;
     public int rank;
 
+    public string cardName;
+
     private bool isDragging = false;
     private float startMouseX;
     private float startRotationY;
@@ -34,6 +36,7 @@ public class Card : MonoBehaviour
         rend.sprite = backSprite;
         coroutineAllowed = true;
         facedUp = false;
+        cardName = $"{rank} of {suit}";
     }
 
     

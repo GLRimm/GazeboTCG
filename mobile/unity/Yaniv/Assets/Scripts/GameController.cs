@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private AnimationController animationController;
 
+    private OpponentCPU opponentCPU;
+
 
     private List<Card> deck = new List<Card>();
     private List<Card> playerHand = new List<Card>();
@@ -25,6 +27,7 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        opponentCPU = new OpponentCPU();
         InitializeDeck();
         Invoke("DealCards", 0.6f);
     }
@@ -112,36 +115,71 @@ public class GameController : MonoBehaviour
         else if (deck.Contains(card) || discard.Contains(card))
         {
             if (playerSelected.Count == 0 || !IsSelectionValid()) return;
-            animationController.PrepStackForAction(discard, LocationName.Discard);
-            Swap(card, deck.Contains(card));
+            EndPlayerTurn(card);
         }
     }
 
-    private void Swap(Card card, bool fromDeck = false) {
-        List<Card> cardsToDiscard = new List<Card>(playerSelected);
+    private void EndPlayerTurn(Card card) {
+        allCards.ForEach(c => c.SetClickable(false));
+        Swap(new SwapParams() {
+            cardsSelected = playerSelected,
+            cardToDraw = card,
+            hand = playerHand,
+            location = LocationName.PlayerHand,
+            fromDeck = deck.Contains(card)
+        });
+        Debug.Log($"Hand out Swap: {printHand(playerHand)}");
+        playerHand.ForEach(c => c.SetClickable(true));
+        Invoke("StartCPUTurn", 1f);
+    }
+
+    private class SwapParams {
+        public List<Card> cardsSelected;
+        public Card cardToDraw;
+        public List<Card> hand;
+        public LocationName location;
+        public bool fromDeck;
+
+        public void Deconstruct(out List<Card> cardsSelected, out Card cardToDraw, out List<Card> hand, out LocationName location, out bool fromDeck)
+        {
+            cardsSelected = this.cardsSelected;
+            cardToDraw = this.cardToDraw;
+            hand = this.hand;
+            location = this.location;
+            fromDeck = this.fromDeck;
+        }
+    }
+
+    private void Swap(SwapParams swapParams) {
+        var (cardsSelected, cardToDraw, hand, location, fromDeck) = swapParams;
+        bool isPlayer = location == LocationName.PlayerHand;
+        List<Card> cardsToDiscard = new List<Card>(cardsSelected);
         List<Card> deckOrDiscard = fromDeck ? deck : discard;
-        deckOrDiscard.Remove(card);
-        playerHand.Add(card);
+
+        animationController.PrepStackForAction(discard, LocationName.Discard);
+
+        deckOrDiscard.Remove(cardToDraw);
+        hand.Add(cardToDraw);
 
         foreach (Card selectedCard in cardsToDiscard)
         {
-            playerSelected.Remove(selectedCard);
-            playerHand.Remove(selectedCard);
+            cardsSelected.Remove(selectedCard);
+            hand.Remove(selectedCard);
             discard.Add(selectedCard);
-            card.SetClickable(true);
+            // cardToDraw.SetClickable(true);
         }
 
+        Debug.Log($"Hand in Swap: {printHand(hand)}");
+
          DealCardParams dealCard = new DealCardParams{
-            card = card,
-            hand = new List<Card>(playerHand),
-            location = LocationName.PlayerHand,
-            flip = fromDeck
+            card = cardToDraw,
+            hand = new List<Card>(hand),
+            location = location,
+            flip = fromDeck ^ !isPlayer
         };
   
         animationController.DealCards(new List<DealCardParams>{dealCard});
-        animationController.SendCardsToDiscard(cardsToDiscard, false);
-
-        deck[0].SetClickable(true);
+        animationController.SendCardsToDiscard(cardsToDiscard, !isPlayer);
     }
 
     private bool IsSelectionValid() {
@@ -179,10 +217,48 @@ public class GameController : MonoBehaviour
         return false;
     }
 
+    private void StartCPUTurn() {
+        turnCount++;
+        GameTurnResult result = opponentCPU.simplePlayTurn(opponentHand, discard);
+        if (result.isYaniv) {
+            throw new System.Exception("Yaniv called by opponent");
+        } else {
+            if (result.deckDraw) {
+                Swap(new SwapParams() {
+                    cardsSelected = new List<Card>(result.discards),
+                    cardToDraw = deck[0],
+                    hand = opponentHand,
+                    location = LocationName.OpponentHand,
+                    fromDeck = true
+                });
+            } else {
+                Swap(new SwapParams() {
+                    cardsSelected = new List<Card>(result.discards),
+                    cardToDraw = result.discardDraw,
+                    hand = opponentHand,
+                    location = LocationName.OpponentHand,
+                    fromDeck = false
+                });
+            }
+        }
+        EndCPUTurn(result.discards);
+    }
+
+    private void EndCPUTurn(List<Card> availableDiscard) {
+        foreach(Card card in availableDiscard) {
+            card.SetClickable(true);
+        }
+        deck[0].SetClickable(true);
+        turnCount++;
+    }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private string printHand(List<Card> hand) {
+        return string.Join(", ", hand.Select(card => card.cardName));
     }
 }
