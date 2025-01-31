@@ -44,14 +44,18 @@ public class Card : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
     }
 
-    public void MoveToPosition(Vector2 targetPos, float duration) {
-        transform.DOMove(new Vector3(targetPos.x, targetPos.y, 0), duration);
+    public void MoveToPosition(Vector2 targetPos, float duration, System.Action onComplete = null) {
+        transform.DOMove(new Vector3(targetPos.x, targetPos.y, 0), duration).OnComplete(() => {
+            if (onComplete != null) {
+                onComplete();
+            }
+        });
     }
 
-    public void MoveUp(float amount)
+    public void MoveUp(float amount, System.Action onComplete = null)
     {
         Vector2 currentPos = transform.position;
-        MoveToPosition(new Vector2(currentPos.x, currentPos.y + amount), 0.3f);
+        MoveToPosition(new Vector2(currentPos.x, currentPos.y + amount), 0.3f, onComplete);
     }
 
     public void FlipCard(float duration = 0.5f) {
@@ -62,6 +66,10 @@ public class Card : MonoBehaviour
 
     public void SetRenderOrder(int order) {
         rend.sortingOrder = order;
+    }
+
+    public void SetClickable(bool clickable) {
+        GetComponent<BoxCollider2D>().enabled = clickable;
     }
 
     // private void OnMouseDown()
@@ -78,7 +86,7 @@ public class Card : MonoBehaviour
         // isDragging = true;
         // startMouseX = Input.mousePosition.x;
         // startRotationY = transform.eulerAngles.y;
-    }
+    }    
 
     void OnMouseDrag()
     {

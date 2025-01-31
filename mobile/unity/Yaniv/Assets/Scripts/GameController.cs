@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 
 
@@ -9,15 +10,7 @@ public class GameController : MonoBehaviour
     private List<Card> allCards = new List<Card>();
 
     [SerializeField]
-    private Vector2 deckPosition = new Vector2(-2.5f, 0);
-    [SerializeField]
-    private Vector2 discardPosition = new Vector2(2.5f, 0);
-    [SerializeField]
-    private Vector2 playerHandPosition = new Vector2(-3f, -3f);
-    [SerializeField]
-    private Vector2 opponentHandPosition = new Vector2(-3f, 3f);
-    [SerializeField]
-    private float cardSpacing = 2f; // Space between cards in hand
+    private AnimationController animationController;
 
 
     private List<Card> deck = new List<Card>();
@@ -38,12 +31,10 @@ public class GameController : MonoBehaviour
 
     void InitializeDeck()
     {
+        allCards.ForEach(card => card.SetClickable(false));
         deck.AddRange(allCards);
-        foreach(Card card in deck)
-        {
-            card.MoveToPosition(deckPosition, 0.5f);
-            card.FlipCard(0.5f);
-        }
+        animationController.ResetDeck(deck);
+    
         // Shuffle the deck
         System.Random r = new System.Random();
         for (int n = deck.Count - 1; n > 0; --n)
@@ -58,7 +49,7 @@ public class GameController : MonoBehaviour
 
     void DealCards()
     {
-        Sequence dealSequence = DOTween.Sequence();
+        List <DealCardParams> cardsToDeal = new List<DealCardParams>();
     
         for (int i = 0; i < 5; i++)
         {
@@ -66,15 +57,15 @@ public class GameController : MonoBehaviour
             if (deck.Count > 0)
             {
                 Card playerCard = deck[0];
-               
                 deck.RemoveAt(0);
-                
-                dealSequence.AppendCallback(() => {
-                    SendCardToPlayerHand(playerCard);
-                    
+                playerHand.Add(playerCard);
+                playerCard.SetClickable(true);
+                cardsToDeal.Add(new DealCardParams{
+                    card = playerCard,
+                    hand = new List<Card>(playerHand),
+                    location = LocationName.PlayerHand,
+                    flip = true
                 });
-                
-                dealSequence.AppendInterval(0.2f);  // Wait between deals
             }
 
             // Deal to opponent
@@ -82,73 +73,110 @@ public class GameController : MonoBehaviour
             {
                 Card opponentCard = deck[0];
                 deck.RemoveAt(0);
-                dealSequence.AppendCallback(() => {
-                    SendCardToOpponentHand(opponentCard);
-                    
+                opponentHand.Add(opponentCard);
+                cardsToDeal.Add(new DealCardParams{
+                    card = opponentCard,
+                    hand = new List<Card>(opponentHand),
+                    location = LocationName.OpponentHand,
+                    flip = false
                 });
-                
-                dealSequence.AppendInterval(0.2f);
             }
         }
-    }
 
-    public void RearrangeHand(List<Card> hand, Vector2 basePosition)
-{
-    int cardCount = hand.Count;
-    if (cardCount == 0) return;
-
-    float totalWidth = cardSpacing * (cardCount - 1);
-    float startX = basePosition.x - (totalWidth / 2);
-
-    for (int i = 0; i < cardCount; i++)
-    {
-        Vector2 newPos = new Vector2(startX + (cardSpacing * i), basePosition.y);
-        hand[i].MoveToPosition(newPos, 0.3f);
-        hand[i].SetRenderOrder(50 + i);
-    }
-}
-
-    private void SendCardToHand(Card card, List<Card> hand, Vector2 handPosition, bool flip) {
-        hand.Add(card);
-        
-         // Calculate the new hand position
-        float totalWidth = cardSpacing * (hand.Count - 1);
-        float startX = handPosition.x - (totalWidth / 2);
-        Vector2 newCardPos = new Vector2(startX + (cardSpacing * (hand.Count - 1)), handPosition.y);
-
-          // Animate the card
-        card.MoveToPosition(newCardPos, 0.3f);
-        if (flip)
-        {
-            card.FlipCard(0.3f);
-        }
-        card.SetRenderOrder(50 + playerHand.Count);
-
-        // Rearrange the hand
-        RearrangeHand(hand, handPosition);
-    }
-
-    private void SendCardToPlayerHand(Card card) {
-        SendCardToHand(card, playerHand, playerHandPosition, true);
-        Debug.Log("Dealt: " + card.rank + " of " + card.suit + " to player");
-    }
-
-    private void SendCardToOpponentHand(Card card) {
-        SendCardToHand(card, opponentHand, opponentHandPosition, false);
-        Debug.Log("Dealt: " + card.rank + " of " + card.suit + " to opponent");
+        Card discardCard = deck[0];
+        deck.RemoveAt(0);
+        discard.Add(discardCard);
+        discardCard.SetClickable(true);
+        cardsToDeal.Add(new DealCardParams{
+            card = discardCard,
+            hand = new List<Card>(discard),
+            location = LocationName.Discard,
+            flip = true
+        });
+        deck[0].SetClickable(true);
+        animationController.DealCards(cardsToDeal);
     }
 
     public void SelectCard(Card card) {
+        if (animationController.IsCardAnimating(card)) return;
         if (playerSelected.Contains(card))
         {
             playerSelected.Remove(card);
-            card.MoveUp(-0.5f);
+            animationController.SelectCard(card, false);
         }
         else if (playerHand.Contains(card))
         {
             playerSelected.Add(card);
-            card.MoveUp(0.5f);
+            animationController.SelectCard(card, true);
         }
+        else if (deck.Contains(card) || discard.Contains(card))
+        {
+            if (playerSelected.Count == 0 || !IsSelectionValid()) return;
+            animationController.PrepStackForAction(discard, LocationName.Discard);
+            Swap(card, deck.Contains(card));
+        }
+    }
+
+    private void Swap(Card card, bool fromDeck = false) {
+        List<Card> cardsToDiscard = new List<Card>(playerSelected);
+        List<Card> deckOrDiscard = fromDeck ? deck : discard;
+        deckOrDiscard.Remove(card);
+        playerHand.Add(card);
+
+        foreach (Card selectedCard in cardsToDiscard)
+        {
+            playerSelected.Remove(selectedCard);
+            playerHand.Remove(selectedCard);
+            discard.Add(selectedCard);
+            card.SetClickable(true);
+        }
+
+         DealCardParams dealCard = new DealCardParams{
+            card = card,
+            hand = new List<Card>(playerHand),
+            location = LocationName.PlayerHand,
+            flip = fromDeck
+        };
+  
+        animationController.DealCards(new List<DealCardParams>{dealCard});
+        animationController.SendCardsToDiscard(cardsToDiscard, false);
+
+        deck[0].SetClickable(true);
+    }
+
+    private bool IsSelectionValid() {
+        if (playerSelected.Count == 0) return false;
+        
+        if (playerSelected.Count == 1) return true;
+        
+        // Check for tuples of same rank
+        int firstRank = playerSelected[0].rank;
+        if(playerSelected.All(card => card.rank == firstRank)) return true;
+        
+        // Runs must be at least 3 cards
+        if(playerSelected.Count > 2) {
+            List<Card> nonJokers = playerSelected
+                .Where(card => card.rank != 0)
+                .OrderBy(c => c.rank)
+                .ToList();
+            
+            // Runs must be flush
+            CardSuit firstSuit = nonJokers[0].suit;
+            if (nonJokers.Any(card => card.suit != firstSuit)) return false;
+
+            int remainingJokers = playerSelected.Count - nonJokers.Count;
+
+            // Check for rank gaps
+            for(int i = 1; i < nonJokers.Count; i++) {
+                int gap = nonJokers[i].rank - nonJokers[i - 1].rank -1;
+                if (gap > remainingJokers) return false;
+                remainingJokers -= gap;
+            }
+            
+            return true;
+        }
+
+        return false;
     }
 
 
