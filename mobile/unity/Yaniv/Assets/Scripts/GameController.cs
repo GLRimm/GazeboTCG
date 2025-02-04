@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using UnityEngine.UI;
 
 
 public class GameController : MonoBehaviour
@@ -11,6 +12,12 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private AnimationController animationController;
+
+    [SerializeField]
+    private TMPro.TextMeshProUGUI scoreText;
+
+    [SerializeField]
+    private Button yanivButton;
 
     private OpponentCPU opponentCPU;
 
@@ -24,6 +31,8 @@ public class GameController : MonoBehaviour
 
     private int turnCount = 0;
 
+    private int playerScore = 0; 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +44,7 @@ public class GameController : MonoBehaviour
     void InitializeDeck()
     {
         allCards.ForEach(card => card.SetClickable(false));
+        yanivButton.gameObject.SetActive(false);
         deck.AddRange(allCards);
         animationController.ResetDeck(deck);
     
@@ -98,6 +108,13 @@ public class GameController : MonoBehaviour
         });
         deck[0].SetClickable(true);
         animationController.DealCards(cardsToDeal);
+        SetPlayerScore();
+
+    }
+
+    private void SetPlayerScore() {
+        playerScore = playerHand.Sum(card => card.value);
+        scoreText.text = $"Score: {playerScore}";
     }
 
     public void SelectCard(Card card) {
@@ -121,6 +138,7 @@ public class GameController : MonoBehaviour
 
     private void EndPlayerTurn(Card card) {
         allCards.ForEach(c => c.SetClickable(false));
+        yanivButton.gameObject.SetActive(false);
         Swap(new SwapParams() {
             cardsSelected = playerSelected,
             cardToDraw = card,
@@ -129,6 +147,7 @@ public class GameController : MonoBehaviour
             fromDeck = deck.Contains(card)
         });
         Debug.Log($"Hand out Swap: {printHand(playerHand)}");
+        SetPlayerScore();
         playerHand.ForEach(c => c.SetClickable(true));
         Invoke("StartCPUTurn", 1f);
     }
@@ -245,11 +264,24 @@ public class GameController : MonoBehaviour
     }
 
     private void EndCPUTurn(List<Card> availableDiscard) {
+        if(deck.Count > 0) {
+            deck[0].SetClickable(true);
+        }
         foreach(Card card in availableDiscard) {
             card.SetClickable(true);
         }
-        deck[0].SetClickable(true);
+        if (playerScore <= 7) {
+            yanivButton.gameObject.SetActive(true);
+        }
         turnCount++;
+    }
+
+    public void Yaniv() {
+        if (playerScore <= opponentHand.Sum(card => card.value)) {
+            throw new System.Exception("Yaniv");
+        } else {
+            throw new System.Exception("Assaf");
+        }
     }
 
     // Update is called once per frame
