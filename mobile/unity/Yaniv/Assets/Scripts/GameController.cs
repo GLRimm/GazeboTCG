@@ -17,6 +17,11 @@ public class GameController : MonoBehaviour
     private TMPro.TextMeshProUGUI scoreText;
 
     [SerializeField]
+    private TMPro.TextMeshProUGUI yanivText;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI resultText;
+
+    [SerializeField]
     private Button yanivButton;
 
     private OpponentCPU opponentCPU;
@@ -24,7 +29,6 @@ public class GameController : MonoBehaviour
 
     private List<Card> deck = new List<Card>();
     private List<Card> playerHand = new List<Card>();
-
     private List<Card> playerSelected = new List<Card>();
     private List<Card> opponentHand = new List<Card>();
     private List<Card> discard = new List<Card>();
@@ -37,12 +41,24 @@ public class GameController : MonoBehaviour
     void Start()
     {
         opponentCPU = new OpponentCPU();
+        Reset();
+    }
+
+    public void Reset()
+    {
+        yanivText.text = "";
+        resultText.text = "";
         InitializeDeck();
         Invoke("DealCards", 0.6f);
     }
 
     void InitializeDeck()
     {
+        deck = new List<Card>();
+        playerHand = new List<Card>();
+        discard = new List<Card>();
+        playerSelected = new List<Card>();
+        opponentHand = new List<Card>();
         allCards.ForEach(card => card.SetClickable(false));
         yanivButton.gameObject.SetActive(false);
         deck.AddRange(allCards);
@@ -238,9 +254,9 @@ public class GameController : MonoBehaviour
 
     private void StartCPUTurn() {
         turnCount++;
-        GameTurnResult result = opponentCPU.simplePlayTurn(opponentHand, discard);
+        GameTurnResult result = opponentCPU.moderatePlayTurn(opponentHand, discard);
         if (result.isYaniv) {
-            throw new System.Exception("Yaniv called by opponent");
+            Yaniv(true);
         } else {
             if (result.deckDraw) {
                 Swap(new SwapParams() {
@@ -276,12 +292,13 @@ public class GameController : MonoBehaviour
         turnCount++;
     }
 
-    public void Yaniv() {
-        if (playerScore <= opponentHand.Sum(card => card.value)) {
-            throw new System.Exception("Yaniv");
-        } else {
-            throw new System.Exception("Assaf");
-        }
+    public void Yaniv(bool opponent = false) {
+        bool victory = playerScore <= opponentHand.Sum(card => card.value);
+        yanivText.text = victory ^ opponent ? "Yaniv!" : "Assaf!";
+        resultText.text = victory ? "You Win!" : "You Lose!";
+        
+        animationController.FlipCardsInSequence(opponentHand);
+
     }
 
     // Update is called once per frame

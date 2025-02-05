@@ -67,6 +67,11 @@ public class Card : MonoBehaviour
         transform.DORotate(new Vector3(0, targetRotation, 0), duration);
     }
 
+    public void FaceDown(float duration = 0.5f) {
+        transform.DORotate(new Vector3(0, 180, 0), duration);
+
+    }
+
     public void SetRenderOrder(int order) {
         rend.sortingOrder = order;
     }

@@ -59,7 +59,7 @@ public class AnimationController : MonoBehaviour
         foreach (Card card in deck)
         {
             card.MoveToPosition(deckPosition, 0.5f);
-            card.FlipCard(0.5f);
+            card.FaceDown(0.5f);
         }
     }
 
@@ -75,6 +75,18 @@ public class AnimationController : MonoBehaviour
             });
             
             dealSequence.AppendInterval(0.2f);  // Wait between deals
+        }
+    }
+
+    public void FlipCardsInSequence(List<Card> cards)
+    {
+        Sequence flipSequence = DOTween.Sequence();
+        foreach (Card card in cards)
+        {
+            flipSequence.AppendCallback(() => {
+                card.FlipCard(0.3f);
+            });
+            flipSequence.AppendInterval(0.2f);
         }
     }
 
